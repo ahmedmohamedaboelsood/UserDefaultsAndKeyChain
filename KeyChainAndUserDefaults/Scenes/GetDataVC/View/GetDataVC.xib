@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GetDataVC" customModule="KeyChainAndUserDefaults" customModuleProvider="target">
+            <connections>
+                <outlet property="userImage" destination="kuF-4T-0Pb" id="5WZ-Q4-4wK"/>
+                <outlet property="usernameLbl" destination="iBY-Bj-CFO" id="olJ-xC-XiF"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="kuF-4T-0Pb">
+                    <rect key="frame" x="121.66666666666669" y="119.99999999999999" width="150" height="148.66666666666669"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="kuF-4T-0Pb" secondAttribute="height" multiplier="1:1" id="4yA-sA-Hbq"/>
+                        <constraint firstAttribute="width" constant="150" id="PsL-Jw-u4I"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iBY-Bj-CFO">
+                    <rect key="frame" x="20.000000000000004" y="306" width="58.333333333333343" height="20.333333333333314"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Pwi-vR-uvM">
+                    <rect key="frame" x="84.666666666666671" y="367" width="223.66666666666663" height="88.666666666666686"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rPj-4W-OQt">
+                            <rect key="frame" x="0.0" y="0.0" width="223.66666666666666" height="34.333333333333336"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="tinted" title="Get dat from UserDefaults"/>
+                            <connections>
+                                <action selector="GetdatfromUserDefaults:" destination="-1" eventType="touchUpInside" id="tCu-Oe-w7V"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OkI-yV-pT7">
+                            <rect key="frame" x="0.0" y="54.333333333333314" width="223.66666666666666" height="34.333333333333343"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="tinted" title="Get dat from KeyChain"/>
+                            <connections>
+                                <action selector="GetdatfromKeyChain:" destination="-1" eventType="touchUpInside" id="X58-uC-Pa5"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="iBY-Bj-CFO" firstAttribute="top" secondItem="kuF-4T-0Pb" secondAttribute="bottom" constant="37" id="Bul-sk-Z4c"/>
+                <constraint firstItem="kuF-4T-0Pb" firstAttribute="width" secondItem="kuF-4T-0Pb" secondAttribute="height" multiplier="1:1" id="LS7-kc-CrI"/>
+                <constraint firstItem="kuF-4T-0Pb" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="60" id="RwD-31-Xpa"/>
+                <constraint firstItem="Pwi-vR-uvM" firstAttribute="centerX" secondItem="kuF-4T-0Pb" secondAttribute="centerX" id="XOb-A4-bNc"/>
+                <constraint firstItem="iBY-Bj-CFO" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="gLu-Mq-zH9"/>
+                <constraint firstItem="kuF-4T-0Pb" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="htb-U0-Mgy"/>
+                <constraint firstItem="Pwi-vR-uvM" firstAttribute="top" secondItem="iBY-Bj-CFO" secondAttribute="bottom" constant="40.666666666666686" id="kcN-YK-gPA"/>
+            </constraints>
+            <point key="canvasLocation" x="58" y="21"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="person.circle.fill" catalog="system" width="128" height="123"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

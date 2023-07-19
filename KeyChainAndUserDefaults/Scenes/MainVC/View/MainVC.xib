@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainVC" customModule="KeyChainAndUserDefaults" customModuleProvider="target">
+            <connections>
+                <outlet property="userImage" destination="MRq-sd-T6d" id="U5F-5f-8Ni"/>
+                <outlet property="userNameTxtField" destination="kkl-n7-ZNl" id="FGr-oa-yBW"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Your Name " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kkl-n7-ZNl">
+                    <rect key="frame" x="20" y="289" width="353" height="34"/>
+                    <color key="backgroundColor" red="0.77857200390000003" green="0.77857200390000003" blue="0.77857200390000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="4n5-ef-jye">
+                    <rect key="frame" x="30" y="346" width="333" height="224"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jd0-AZ-8xn">
+                            <rect key="frame" x="0.0" y="0.0" width="333" height="50"/>
+                            <color key="backgroundColor" systemColor="systemGreenColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="HyT-6w-kfv"/>
+                            </constraints>
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="gray" title="Save using KeyChain"/>
+                            <connections>
+                                <action selector="saveUsingKeyChainBtn:" destination="-1" eventType="touchUpInside" id="8X0-Zk-yZA"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XCV-sb-aNS">
+                            <rect key="frame" x="0.0" y="58" width="333" height="50"/>
+                            <color key="backgroundColor" systemColor="systemGreenColor"/>
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="gray" title="Save using UserDefults"/>
+                            <connections>
+                                <action selector="saveUsingUserDefaultsBtn:" destination="-1" eventType="touchUpInside" id="aCo-Nr-acN"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VgN-t7-g1o">
+                            <rect key="frame" x="0.0" y="116" width="333" height="50"/>
+                            <color key="backgroundColor" systemColor="systemRedColor"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="gray" title="Delete using KeyChain"/>
+                            <connections>
+                                <action selector="deleteUsingKeyChainBtn:" destination="-1" eventType="touchUpInside" id="NZo-Rf-fdk"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Es0-BE-3Hh">
+                            <rect key="frame" x="0.0" y="174" width="333" height="50"/>
+                            <color key="backgroundColor" systemColor="systemRedColor"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="gray" title="Delete using UserDefaults"/>
+                            <connections>
+                                <action selector="deleteUsingUserDefaultsBtn:" destination="-1" eventType="touchUpInside" id="FSt-B4-Rls"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JSM-pY-8xt">
+                    <rect key="frame" x="60" y="677.66666666666663" width="273" height="34.333333333333371"/>
+                    <color key="tintColor" red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="tinted" title="Get Data"/>
+                    <connections>
+                        <action selector="navigateToGetDataScreen:" destination="-1" eventType="touchUpInside" id="oov-fa-RUV"/>
+                    </connections>
+                </button>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="MRq-sd-T6d">
+                    <rect key="frame" x="121.66666666666669" y="119.99999999999999" width="150" height="148.66666666666669"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="MRq-sd-T6d" secondAttribute="height" multiplier="1:1" id="5Y4-pN-Ylt"/>
+                        <constraint firstAttribute="width" constant="150" id="wr6-aC-Rez"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <color key="tintColor" red="0.12549019610000001" green="0.12549019610000001" blue="0.12549019610000001" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="JSM-pY-8xt" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="60" id="0PW-32-Yr6"/>
+                <constraint firstItem="JSM-pY-8xt" firstAttribute="centerX" secondItem="4n5-ef-jye" secondAttribute="centerX" id="2MN-3K-bZr"/>
+                <constraint firstItem="MRq-sd-T6d" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="8af-Bn-ONy"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="JSM-pY-8xt" secondAttribute="trailing" constant="60" id="AUh-pJ-IJZ"/>
+                <constraint firstItem="MRq-sd-T6d" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="60" id="CeT-fk-0r7"/>
+                <constraint firstItem="4n5-ef-jye" firstAttribute="top" secondItem="kkl-n7-ZNl" secondAttribute="bottom" constant="23" id="Dqf-Fn-qTa"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="4n5-ef-jye" secondAttribute="trailing" constant="30" id="Ptb-xH-fMN"/>
+                <constraint firstItem="kkl-n7-ZNl" firstAttribute="centerX" secondItem="MRq-sd-T6d" secondAttribute="centerX" id="RJ7-Yo-fTR"/>
+                <constraint firstItem="4n5-ef-jye" firstAttribute="centerX" secondItem="kkl-n7-ZNl" secondAttribute="centerX" id="RM6-Sz-ObH"/>
+                <constraint firstItem="4n5-ef-jye" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="T2r-Mn-6og"/>
+                <constraint firstItem="kkl-n7-ZNl" firstAttribute="top" secondItem="MRq-sd-T6d" secondAttribute="bottom" constant="20" id="VRQ-ze-8vY"/>
+                <constraint firstItem="kkl-n7-ZNl" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="jPi-5X-TTG"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="kkl-n7-ZNl" secondAttribute="trailing" constant="20" id="oOf-4j-4fr"/>
+                <constraint firstItem="JSM-pY-8xt" firstAttribute="top" secondItem="4n5-ef-jye" secondAttribute="bottom" constant="107.66666666666663" id="qS7-pC-bdF"/>
+            </constraints>
+            <point key="canvasLocation" x="39" y="20"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="person.circle.fill" catalog="system" width="128" height="123"/>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

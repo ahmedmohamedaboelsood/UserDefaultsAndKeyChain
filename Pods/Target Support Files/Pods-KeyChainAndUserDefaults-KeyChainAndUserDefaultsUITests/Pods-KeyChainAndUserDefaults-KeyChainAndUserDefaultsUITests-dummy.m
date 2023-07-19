@@ -1,0 +1,5 @@
+#import <Foundation/Foundation.h>
+@interface PodsDummy_Pods_KeyChainAndUserDefaults_KeyChainAndUserDefaultsUITests : NSObject
+@end
+@implementation PodsDummy_Pods_KeyChainAndUserDefaults_KeyChainAndUserDefaultsUITests
+@end
